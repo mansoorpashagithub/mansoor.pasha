@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mansoor Pasha | Portfolio</title>
+  <meta name="description" content="Portfolio of Mansoor Pasha - Test Engineer with expertise in automation tools, IVR testing, and process optimization.">
+  <meta name="keywords" content="Mansoor Pasha, Portfolio, Test Engineer, Automation, Cyara, Selenium, IVR Testing">
+  <meta name="author" content="Mansoor Pasha">
+  <link rel="icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --primary-color: #03dac6;
+      --secondary-color: #03dac6;
+      --card-bg: #1f1f1f;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #f4f4f4;
+      --text-color: #1f1f1f;
+      --primary-color: #B8860B;
+      --secondary-color: #B8860B;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(31, 31, 31, 0.7);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+
+header h1 {
+  color: var(--text-color);
+}
+
+
+    nav a {
+  position: relative;
+  color: var(--primary-color);
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    .section {
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .project {
+      position: relative;
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .project[data-title]:hover::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: -1.8rem;
+      left: 0;
+      right: 0;
+      background: var(--primary-color);
+      color: var(--bg-color);
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    form input, form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: #999;
+}
+
+form button {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: var(--secondary-color);
+}
+
+.social-links p {
+  margin: 0.5rem 0;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+
+    button {
+      padding: 0.8rem;
+      border: none;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .skill {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      width: 180px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .timeline {
+      position: relative;
+      margin: auto;
+      max-width: 600px;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--primary-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 1rem 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0.4rem;
+      width: 12px;
+      height: 12px;
+      background: var(--primary-color);
+      border-radius: 50%;
+    }
+
+    footer {
+      background: var(--bg-color);
+      color: #757575;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #2a2a2a;
+    }
+      .toggle-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+      .gradient-text {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+    .accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: var(--card-bg);
+  color: var(--primary-color);
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.accordion-body {
+  padding: 1rem;
+  display: none;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+    /* Example primary/secondary themed button */
+.resume-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  color: var(--bg-colorr);
+  background-color: var(--primary-color);
+}
+
+ .profile-thumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-overlay.show {
+  display: flex;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.profile-thumbnail {
+  position: relative;
+}
+
+.profile-thumbnail::after {
+  content: "Click to expand";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.profile-thumbnail:hover::after {
+  opacity: 1;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="gradient-text">Mansoor Pasha</h1>
+      <button class="toggle-button" onclick="toggleTheme()" id="theme-toggle">
+  🌜
+</button>
+
+
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="section" id="home">
+    <h2 data-aos="fade-right">Welcome</h2>
+    <div class="card" data-aos="fade-up">
+      <p>Hello! I’m <strong>Mansoor Pasha</strong>, a functional tester with over 3 years of experience in IVR systems, API validation, and database testing within call center technology environments. I specialize in creating automation tools that have reduced manual effort by up to 90%, driving both speed and accuracy in testing processes.</p>
+      <!-- Thumbnail -->
+<div class="profile-thumbnail" onclick="openImagePopup()">
+  <img src="profile.jpg" alt="Profile Picture" />
+</div>
+
+<!-- Popup Viewer -->
+<div id="imagePopup" class="popup-overlay" onclick="closeImagePopup()">
+  <img src="profile.jpg" class="popup-image" alt="Full Profile" />
+</div>
+
+
+      <a href="MansoorPasha_Resume.pdf" download class="button resume-button">Download Resume
+</a>
+
+    </div>
+  </div>
+
+  <div class="section" id="about">
+    <h2 data-aos="fade-left">About Me</h2>
+    <div class="card" data-aos="fade-up">
+      <p>I bring a strong background in functional testing, regression testing, defect management, and tool-based optimization using Python, SQL, and Excel macros. I’ve been recognized for enabling faster debugging, improving data accuracy, and enhancing the overall test lifecycle through innovative automation strategies.</p>
+    </div>
+  </div>
+
+  <div class="section" id="skills">
+    <h2 data-aos="fade-up">Skills</h2>
+    <div class="skills-container">
+      <div class="skill" data-aos="fade-right">Cyara</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="100">Octane ALM</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="200">SQL</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="300">Jira</div>
+      <div class="skill" data-aos="fade-left">Postman</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="100">SoapUI</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="200">Git Lab</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="300">Kibana</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="400">Splunk</div>
+      <div class="skill" data-aos="fade-up">Python</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="100">C</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="200">Portainer</div>
+
+    </div>
+  </div>
+
+  <div class="section" id="education">
+    <h2 data-aos="fade-up">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <strong>Bachelor of Engineering in Electronics and Communication</strong><br />
+        Dr. Ambedkar Institute of Technology, Bangalore<br />
+        Graduated year: 2021<br/>
+        CGPA: 8.22
+      </div>
+      <div class="timeline-item" data-aos="fade-right">
+        <strong>Intermediate-PCME</strong><br />
+        Bunt's Sangha RNS Composite PU College<br />
+        Graduated year: 2017<br/>
+        Percentage : 85%
+      </div>
+      <div class="timeline-item" data-aos="fade-right">
+        <strong>Matriculation</strong><br />
+        St. John's High School<br />
+        Graduated year: 2015<br/>
+        Percentage : 79%
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="experience">
+  <h2 data-aos="fade-up">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+      <div class="card">
+        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Infosys Ltd., Bangalore, India</h3>
+        <p><strong>Role:</strong> Quality Engineer Analyst</p>
+        <p><strong>Duration:</strong> November 2021 – June 2025</p>
+        <ul style="text-align: left; margin-top: 1rem; line-height: 1.7;">
+          <li>Developed automation tools that reduced manual effort by 80–90% across IVR and API testing.</li>
+          <li>Performed functional testing of IVR systems using Cyara, validating DTMF inputs, voice prompts, and call routing.</li>
+          <li>Built Python-based tools for log command generation, database result extraction, and test automation.</li>
+          <li>Automated API smoke testing and documentation using Selenium and Excel macros.</li>
+          <li>Validated APIs using Postman and SoapUI to ensure backend integration accuracy.</li>
+          <li>Managed test cases and tracked defects using Jira and Octane ALM.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="section" id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+  <div class="card" data-aos="fade-up">
+
+    <!-- Octane Test Case Executor -->
+    <div class="accordion-item">
+      <button class="accordion-header">Octane Test Case Executor (Feb 2025 – Mar 2025)</button>
+      <div class="accordion-body">
+        <p><strong>Problem:</strong> Manual execution of Octane test cases and documentation was tedious and time intensive.</p>
+        <p><strong>Solution:</strong> Developed a Selenium-based tool to automate test case execution, adding comments, UCIDs, and attachments.</p>
+        <p><strong>Impact:</strong> Enhanced productivity by automating 100% of Octane test case processes, reducing manual errors.</p>
+      </div>
+    </div>
+
+    <!-- NDF Log Command Generator -->
+    <div class="accordion-item">
+      <button class="accordion-header">NDF Log Command Generator (Jan 2025 – Mar 2025)</button>
+      <div class="accordion-body">
+        <p><strong>Problem:</strong> New team members lacked ADM access, causing delays in retrieving logs for Enterprise IVR and NLU initiatives.</p>
+        <p><strong>Solution:</strong> Developed a Python-based tool that generates Linux commands for session ID retrieval, log access, and permissions.</p>
+        <p><strong>Impact:</strong> Reduced log retrieval time by 70%, streamlining the debugging process and enabling faster testing cycles.</p>
+      </div>
+    </div>
+
+    <!-- API Smoke Test Automator -->
+    <div class="accordion-item">
+      <button class="accordion-header">API Smoke Test Automator (Jan 2024 – Jul 2024)</button>
+      <div class="accordion-body">
+        <p><strong>Problem:</strong> Manual API testing and documentation were repetitive and prone to inconsistencies.</p>
+        <p><strong>Solution:</strong> Created a Selenium and Excel-based tool to automate smoke test execution, documentation, and evidence collection.</p>
+        <p><strong>Impact:</strong> Achieved 85% time savings on API testing and ensured consistent reporting across all cycles.</p>
+      </div>
+    </div>
+
+    <!-- Database Extractor Tool -->
+    <div class="accordion-item">
+      <button class="accordion-header">Database Extractor Tool (Jun 2024 – Dec 2024)</button>
+      <div class="accordion-body">
+        <p><strong>Problem:</strong> Manual data extraction from multiple databases for IVR call flow analysis was time-consuming and error-prone.</p>
+        <p><strong>Solution:</strong> Automated data retrieval and aggregation into a single Excel file using Python, enabling real-time insights.</p>
+        <p><strong>Impact:</strong> Improved accuracy and reduced data preparation time by 90%, benefitting the entire team.</p>
+      </div>
+    </div>
+
+    <!-- Academic Project -->
+    <div class="accordion-item">
+      <button class="accordion-header">Academic Project - Smart Assistant Tool (Sep 2020 – Feb 2021)</button>
+      <div class="accordion-body">
+        <p>Developed a Python-based Smart Assistant using Tkinter for scheduling and managing appointments.</p>
+        <p>Integrated email-based user verification for secure access and enhanced reliability.</p>
+        <p>Led a team of 4, fostering collaboration and ensuring successful project delivery.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <section class="section" id="contact">
+  <h2 data-aos="fade-up">Contact</h2>
+  <div class="card" data-aos="fade-up">
+    <form action="mailto:mansoor01pasha@gmail.com" method="post" enctype="text/plain">
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </div>
+    </form>
+
+    <div class="social-links" style="margin-top: 2rem;">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:mansoor01pasha@gmail.com">mansoor01pasha@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mansoor-pasha-18470a1a7" target="_blank">LinkedIn Profile</a></p>
+      <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/mansoor.pasha01" target="_blank">Instagram</a></p>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+  <div style="text-align: center; padding: 1rem; background-color: #f8f9fa; color: #333;">
+    &copy; 2025 Mansoor Pasha. All rights reserved.
+    <br />
+    <a href="#top" style="text-decoration: none; color: #007BFF; font-weight: bold;">Back to Top</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init();
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    html.setAttribute('data-theme', newTheme);
+    toggleBtn.textContent = newTheme === 'light' ? '🌞' : '🌜';
+
+    localStorage.setItem('theme', newTheme); // Save preference
+  }
+
+  // Load saved theme on page load
+  window.onload = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('theme-toggle').textContent = savedTheme === 'light' ? '🌞' : '🌜';
+    }
+  };
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const currentItem = header.parentElement;
+      const allItems = document.querySelectorAll('.accordion-item');
+
+      allItems.forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove('active');
+        }
+      });
+
+      currentItem.classList.toggle('active');
+    });
+  });
+    function openImagePopup() {
+    document.getElementById("imagePopup").classList.add("show");
+  }
+
+  function closeImagePopup() {
+    document.getElementById("imagePopup").classList.remove("show");
+  }
+</script>
+
+
+</body>
+</html>
