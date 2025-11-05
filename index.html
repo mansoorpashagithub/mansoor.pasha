@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mansoor Pasha | Portfolio</title>
-  <meta name="description" content="Portfolio of Mansoor Pasha - Test Engineer with expertise in automation tools, IVR testing, and process optimization.">
-  <meta name="keywords" content="Mansoor Pasha, Portfolio, Test Engineer, Automation, Cyara, Selenium, IVR Testing, Bangalore">
+  <meta name="description" content="Mansoor Pasha - Test Engineer at TCS specializing in IVR Testing, Automation, and API Validation. Creator of automation tools that reduce manual effort by 90%.">
+  <meta name="keywords" content="Mansoor Pasha, TCS, Test Engineer, IVR Testing, Genesys, Cyara, Automation, Python, API Testing, Bangalore">
   <meta name="author" content="Mansoor Pasha">
   <meta property="og:title" content="Mansoor Pasha - Portfolio">
 <meta property="og:description" content="Explore projects, resume, and contact info.">
@@ -18,19 +18,21 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --primary-color: #03dac6;
-      --secondary-color: #03dac6;
-      --card-bg: #1f1f1f;
+      --bg-color: #0a0a0a;
+      --text-color: #e8e8e8;
+      --primary-color: #00d9ff;
+      --secondary-color: #0099cc;
+      --card-bg: #1a1a1a;
+      --accent-color: #ff6b35;
     }
 
     [data-theme="light"] {
-      --bg-color: #f4f4f4;
-      --text-color: #1f1f1f;
-      --primary-color: #B8860B;
-      --secondary-color: #B8860B;
+      --bg-color: #f8f9fa;
+      --text-color: #2c3e50;
+      --primary-color: #0099cc;
+      --secondary-color: #00d9ff;
       --card-bg: #ffffff;
+      --accent-color: #ff6b35;
     }
 
     * {
@@ -41,11 +43,14 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg-color);
       color: var(--text-color);
       transition: background 0.3s, color 0.3s;
+      line-height: 1.6;
     }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
     header {
   position: fixed;
@@ -100,11 +105,18 @@ nav a:hover::after {
 
     .card {
       background: var(--card-bg);
-      padding: 2rem;
+      padding: 2.5rem;
       margin: 1.5rem auto;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      max-width: 950px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 217, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
     }
 
     .section h2 {
@@ -215,10 +227,19 @@ form button:hover {
 
     .skill {
       background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 8px;
+      padding: 1.2rem;
+      border-radius: 12px;
       width: 180px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .skill:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.4);
+      border-color: var(--primary-color);
     }
 
     .timeline {
@@ -410,8 +431,84 @@ form button:hover {
   opacity: 1;
 }
 
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
 
+.stat-box {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 200px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  transition: all 0.3s ease;
+}
 
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 153, 204, 0.1));
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-box {
+    min-width: 100%;
+  }
+
+  .skill {
+    width: 140px;
+  }
+
+  .highlight-box {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
 
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTP6XFYMMC"></script>
@@ -447,11 +544,33 @@ form button:hover {
   <div class="section" id="home">
     <h2 data-aos="fade-right">Welcome</h2>
     <div class="card" data-aos="fade-up">
-      <p>Hello! I’m <strong>Mansoor Pasha</strong>, a functional tester with over 3 years of experience in IVR systems, API validation, and database testing within call center technology environments. I specialize in creating automation tools that have reduced manual effort by up to 90%, driving both speed and accuracy in testing processes.</p>
+      <p style="font-size: 1.15rem; line-height: 1.8;">
+        Hello! I'm <strong>Mansoor Pasha</strong>, a Test Engineer at <strong style="color: var(--primary-color);">Tata Consultancy Services (TCS)</strong> with over 3+ years of expertise in IVR Testing, API Validation, and Test Automation. Currently working on the <strong>Genesys platform</strong>, I specialize in designing innovative automation solutions that have reduced manual testing effort by up to 90%, significantly improving team productivity and software quality.
+      </p>
+      <p style="margin-top: 1rem; font-size: 1rem; color: var(--secondary-color); font-weight: 600;">
+        Test Engineer | IVR Testing Expert | Automation Enthusiast | Problem Solver
+      </p>
+
       <!-- Thumbnail -->
-<div class="profile-thumbnail" onclick="openImagePopup()">
-  <img src="profile.jpg" alt="Profile Picture" />
-</div>
+      <div class="profile-thumbnail" onclick="openImagePopup()">
+        <img src="profile.jpg" alt="Profile Picture" />
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-container">
+        <div class="stat-box" data-aos="zoom-in">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+          <span class="stat-number">90%</span>
+          <span class="stat-label">Effort Reduction</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Automation Tools</span>
+        </div>
+      </div>
 
 <!-- Popup Viewer -->
 <div id="imagePopup" class="popup-overlay" onclick="closeImagePopup()">
@@ -472,26 +591,48 @@ form button:hover {
   <div class="section" id="about">
     <h2 data-aos="fade-left">About Me</h2>
     <div class="card" data-aos="fade-up">
-      <p>I bring a strong background in functional testing, regression testing, defect management, and tool-based optimization using Python, SQL, and Excel macros. I’ve been recognized for enabling faster debugging, improving data accuracy, and enhancing the overall test lifecycle through innovative automation strategies.</p>
+      <div class="highlight-box">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">Who I Am</p>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+          A detail-oriented and analytical Test Engineer with a proven track record of enhancing software quality through innovative testing strategies and automation. My journey in quality assurance has been defined by a passion for building tools that solve real problems and empower teams to work smarter.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">What I Do</p>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+          With expertise across <strong>IVR platforms (Genesys & Cyara)</strong>, I design automation solutions using <strong>Python, Excel Macros, Selenium,</strong> and various testing frameworks. My work consistently delivers 80-90% reductions in manual effort while improving accuracy and reporting clarity across complex call center technology environments.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">How I Work</p>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+          I thrive in collaborative, cross-functional environments and take pride in knowledge sharing through training and tool adoption. Whether optimizing test cycles, debugging complex system integrations, or standardizing processes, I bring dedication, curiosity, and a results-driven mindset to every challenge. My approach focuses on sustainable solutions that create lasting value for teams and organizations.
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="section" id="skills">
-    <h2 data-aos="fade-up">Skills</h2>
+    <h2 data-aos="fade-up">Technical Skills</h2>
     <div class="skills-container">
-      <div class="skill" data-aos="fade-right">Cyara</div>
-      <div class="skill" data-aos="fade-right" data-aos-delay="100">Octane ALM</div>
-      <div class="skill" data-aos="fade-right" data-aos-delay="200">SQL</div>
-      <div class="skill" data-aos="fade-right" data-aos-delay="300">Jira</div>
-      <div class="skill" data-aos="fade-left">Postman</div>
-      <div class="skill" data-aos="fade-left" data-aos-delay="100">SoapUI</div>
-      <div class="skill" data-aos="fade-left" data-aos-delay="200">Git Lab</div>
-      <div class="skill" data-aos="fade-left" data-aos-delay="300">Kibana</div>
-      <div class="skill" data-aos="fade-up" data-aos-delay="400">Splunk</div>
-      <div class="skill" data-aos="fade-up">Python</div>
-      <div class="skill" data-aos="fade-up" data-aos-delay="100">C</div>
-      <div class="skill" data-aos="fade-up" data-aos-delay="200">Portainer</div>
-
+      <div class="skill" data-aos="fade-right">Genesys</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="50">Cyara</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="100">Python</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="150">Selenium</div>
+      <div class="skill" data-aos="fade-left">SQL</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="50">Oracle</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="100">Postman</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="150">SoapUI</div>
+      <div class="skill" data-aos="fade-up">Wiremock</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="50">Excel Macros</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="100">Kibana</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="150">Jira</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="200">Octane ALM</div>
+      <div class="skill" data-aos="fade-right" data-aos-delay="250">GitLab</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="200">Splunk</div>
+      <div class="skill" data-aos="fade-left" data-aos-delay="250">Portainer</div>
     </div>
   </div>
 
@@ -520,20 +661,37 @@ form button:hover {
   </div>
 
   <div class="section" id="experience">
-  <h2 data-aos="fade-up">Experience</h2>
+  <h2 data-aos="fade-up">Professional Experience</h2>
   <div class="timeline">
     <div class="timeline-item" data-aos="fade-up">
       <div class="card">
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Infosys Ltd., Bangalore, India</h3>
-        <p><strong>Role:</strong> Quality Engineer Analyst</p>
-        <p><strong>Duration:</strong> November 2021 – June 2025</p>
-        <ul style="text-align: left; margin-top: 1rem; line-height: 1.7;">
-          <li>Developed automation tools that reduced manual effort by 80–90% across IVR and API testing.</li>
-          <li>Performed functional testing of IVR systems using Cyara, validating DTMF inputs, voice prompts, and call routing.</li>
-          <li>Built Python-based tools for log command generation, database result extraction, and test automation.</li>
-          <li>Automated API smoke testing and documentation using Selenium and Excel macros.</li>
-          <li>Validated APIs using Postman and SoapUI to ensure backend integration accuracy.</li>
-          <li>Managed test cases and tracked defects using Jira and Octane ALM.</li>
+        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Tata Consultancy Services (TCS)</h3>
+        <p style="font-size: 1.1rem;"><strong>Test Engineer - IVR Testing (Genesys Platform)</strong></p>
+        <p style="color: var(--secondary-color); font-weight: 600;">August 2025 – Present | Bangalore, India</p>
+        <ul style="text-align: left; margin-top: 1.5rem; line-height: 1.9; font-size: 1.05rem;">
+          <li>Conducting comprehensive IVR functional testing on the <strong>Genesys platform</strong>, ensuring seamless customer interaction experiences.</li>
+          <li>Designing and executing complex test cases for call flows, validating DTMF inputs, voice prompts, and routing logic.</li>
+          <li>Collaborating with cross-functional development and operations teams to ensure end-to-end call quality validation.</li>
+          <li>Enhancing automation frameworks and reporting efficiency through custom Python scripts and structured testing methodologies.</li>
+          <li>Contributing to process improvements and knowledge transfer initiatives to elevate team capabilities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up">
+      <div class="card">
+        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Infosys Ltd.</h3>
+        <p style="font-size: 1.1rem;"><strong>Test Engineer - IVR Testing (Cyara Platform)</strong></p>
+        <p style="color: var(--secondary-color); font-weight: 600;">November 2021 – July 2025 | Bangalore, India</p>
+        <ul style="text-align: left; margin-top: 1.5rem; line-height: 1.9; font-size: 1.05rem;">
+          <li>Performed end-to-end IVR testing using <strong>Cyara</strong>, validating call flows, voice prompts, DTMF interactions, and system integrations.</li>
+          <li>Developed <strong>4+ internal automation tools</strong> using Python, Selenium, and Excel Macros that improved test coverage and reduced manual effort by up to 90%.</li>
+          <li>Built a <strong>Database Extraction Tool</strong> that consolidated results from multiple sources, enabling faster debugging and complete IVR call flow visibility.</li>
+          <li>Created an <strong>API Regression Automation Tool</strong> that standardized testing documentation and reduced validation time by 85%.</li>
+          <li>Designed an <strong>NDF Log Command Generator</strong> tool that reduced log retrieval time by 70%, streamlining debugging processes for the entire team.</li>
+          <li>Validated APIs using Postman, SoapUI, and Wiremock to ensure backend integration accuracy and reliability.</li>
+          <li>Managed test cases and tracked defects using Jira and Octane ALM, maintaining comprehensive test documentation.</li>
+          <li>Recognized for significantly improving test execution efficiency and enabling knowledge transfers across teams.</li>
         </ul>
       </div>
     </div>
@@ -542,56 +700,72 @@ form button:hover {
 
 
   <div class="section" id="projects">
-  <h2 data-aos="fade-up">Projects</h2>
+  <h2 data-aos="fade-up">Key Projects & Achievements</h2>
   <div class="card" data-aos="fade-up">
 
-    <!-- Octane Test Case Executor -->
+    <!-- IVR Data Mining Tool -->
     <div class="accordion-item">
-      <button class="accordion-header">Octane Test Case Executor (Feb 2025 – Mar 2025)</button>
+      <button class="accordion-header">IVR Data Mining Automation Tool - Excel Macro + Web Service Integration</button>
       <div class="accordion-body">
-        <p><strong>Problem:</strong> Manual execution of Octane test cases and documentation was tedious and time intensive.</p>
-        <p><strong>Solution:</strong> Developed a Selenium-based tool to automate test case execution, adding comments, UCIDs, and attachments.</p>
-        <p><strong>Impact:</strong> Enhanced productivity by automating 100% of Octane test case processes, reducing manual errors.</p>
+        <p style="line-height: 1.8;"><strong style="color: var(--accent-color);">Challenge:</strong> Manual validation of IVR call flow data from multiple web services was highly time-consuming and error-prone, creating bottlenecks in the testing process.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--primary-color);">Solution:</strong> Developed an advanced Excel Macro-based automation tool integrated with multiple web services to automatically fetch, validate, and consolidate live IVR data in real-time.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--secondary-color);">Impact:</strong> Reduced manual validation effort by <strong>80-90%</strong>, dramatically improved team-wide turnaround time, enhanced accuracy in call flow testing and documentation, and became a standard tool adopted across the entire testing team.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Excel VBA, Web Service APIs, Python, Data Validation Frameworks</p>
+      </div>
+    </div>
+
+    <!-- Database Results Extraction Tool -->
+    <div class="accordion-item">
+      <button class="accordion-header">Database Results Extraction Tool - Python Automation</button>
+      <div class="accordion-body">
+        <p style="line-height: 1.8;"><strong style="color: var(--accent-color);">Challenge:</strong> Testers needed to manually query multiple databases to extract and consolidate IVR call flow data, leading to significant time loss and potential data inconsistencies.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--primary-color);">Solution:</strong> Built a Python-based automation tool that automatically queries multiple database sources, extracts relevant results, and consolidates them into a unified Excel report with proper formatting and cross-referencing.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--secondary-color);">Impact:</strong> Enabled <strong>faster debugging</strong> and provided complete visibility of IVR call flows across systems. Reduced data preparation time by <strong>90%</strong> and improved cross-team collaboration through standardized reporting.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Python, SQL, Oracle Database, Pandas, openpyxl</p>
+      </div>
+    </div>
+
+    <!-- API Regression Automation Tool -->
+    <div class="accordion-item">
+      <button class="accordion-header">API Regression Automation Tool - Macro-based Testing</button>
+      <div class="accordion-body">
+        <p style="line-height: 1.8;"><strong style="color: var(--accent-color);">Challenge:</strong> API regression testing was repetitive, time-consuming, and lacked standardized documentation, leading to inconsistencies across test cycles.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--primary-color);">Solution:</strong> Created an Excel Macro-driven automation tool that executes API regression validations, captures results, generates standardized documentation, and maintains historical test evidence.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--secondary-color);">Impact:</strong> Standardized API regression documentation across projects, reduced manual dependency, and achieved <strong>85% time savings</strong> in testing cycles while ensuring consistency and traceability.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Excel VBA, REST APIs, Postman Collections, Automated Reporting</p>
       </div>
     </div>
 
     <!-- NDF Log Command Generator -->
     <div class="accordion-item">
-      <button class="accordion-header">NDF Log Command Generator (Jan 2025 – Mar 2025)</button>
+      <button class="accordion-header">NDF Log Command Generator - Access Enablement Tool</button>
       <div class="accordion-body">
-        <p><strong>Problem:</strong> New team members lacked ADM access, causing delays in retrieving logs for Enterprise IVR and NLU initiatives.</p>
-        <p><strong>Solution:</strong> Developed a Python-based tool that generates Linux commands for session ID retrieval, log access, and permissions.</p>
-        <p><strong>Impact:</strong> Reduced log retrieval time by 70%, streamlining the debugging process and enabling faster testing cycles.</p>
+        <p style="line-height: 1.8;"><strong style="color: var(--accent-color);">Challenge:</strong> New team members lacked ADM access, causing significant delays in retrieving logs for Enterprise IVR and NLU initiatives, hindering debugging efficiency.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--primary-color);">Solution:</strong> Developed a Python-based tool that auto-generates Linux commands for session ID retrieval, log access, and permission management, eliminating dependency on specialized access.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--secondary-color);">Impact:</strong> Reduced log retrieval time by <strong>70%</strong>, streamlined debugging processes, enabled faster testing cycles, and empowered all team members to work independently.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Python, Linux Shell Commands, Log Analysis, Automation Scripting</p>
       </div>
     </div>
 
-    <!-- API Smoke Test Automator -->
+    <!-- Octane Test Case Executor -->
     <div class="accordion-item">
-      <button class="accordion-header">API Smoke Test Automator (Jan 2024 – Jul 2024)</button>
+      <button class="accordion-header">Octane Test Case Executor - Selenium Automation</button>
       <div class="accordion-body">
-        <p><strong>Problem:</strong> Manual API testing and documentation were repetitive and prone to inconsistencies.</p>
-        <p><strong>Solution:</strong> Created a Selenium and Excel-based tool to automate smoke test execution, documentation, and evidence collection.</p>
-        <p><strong>Impact:</strong> Achieved 85% time savings on API testing and ensured consistent reporting across all cycles.</p>
-      </div>
-    </div>
-
-    <!-- Database Extractor Tool -->
-    <div class="accordion-item">
-      <button class="accordion-header">Database Extractor Tool (Jun 2024 – Dec 2024)</button>
-      <div class="accordion-body">
-        <p><strong>Problem:</strong> Manual data extraction from multiple databases for IVR call flow analysis was time-consuming and error-prone.</p>
-        <p><strong>Solution:</strong> Automated data retrieval and aggregation into a single Excel file using Python, enabling real-time insights.</p>
-        <p><strong>Impact:</strong> Improved accuracy and reduced data preparation time by 90%, benefitting the entire team.</p>
+        <p style="line-height: 1.8;"><strong style="color: var(--accent-color);">Challenge:</strong> Manual execution and documentation of Octane test cases was tedious, time-intensive, and prone to human errors.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--primary-color);">Solution:</strong> Developed a Selenium-based automation tool to execute test cases, automatically add comments, UCIDs, attachments, and update test execution status in Octane ALM.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong style="color: var(--secondary-color);">Impact:</strong> Enhanced productivity by automating <strong>100%</strong> of Octane test case documentation processes, reducing manual errors and saving hours of repetitive work per test cycle.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Python, Selenium WebDriver, Octane ALM API, Web Automation</p>
       </div>
     </div>
 
     <!-- Academic Project -->
     <div class="accordion-item">
-      <button class="accordion-header">Academic Project - Smart Assistant Tool (Sep 2020 – Feb 2021)</button>
+      <button class="accordion-header">Smart Assistant Tool - Academic Project (Sep 2020 – Feb 2021)</button>
       <div class="accordion-body">
-        <p>Developed a Python-based Smart Assistant using Tkinter for scheduling and managing appointments.</p>
-        <p>Integrated email-based user verification for secure access and enhanced reliability.</p>
-        <p>Led a team of 4, fostering collaboration and ensuring successful project delivery.</p>
+        <p style="line-height: 1.8;">Developed a Python-based Smart Assistant application using Tkinter for scheduling and managing appointments with an intuitive user interface.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;">Integrated email-based user verification system for secure access, authentication, and enhanced reliability of the application.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;">Led a team of 4 members, fostering effective collaboration, managing timelines, and ensuring successful project delivery within academic constraints.</p>
+        <p style="line-height: 1.8; margin-top: 1rem;"><strong>Technologies:</strong> Python, Tkinter, Email Integration, SQLite, GUI Development</p>
       </div>
     </div>
 
@@ -600,31 +774,46 @@ form button:hover {
 
 
   <section class="section" id="contact">
-  <h2 data-aos="fade-up">Contact</h2>
+  <h2 data-aos="fade-up">Get In Touch</h2>
   <div class="card" data-aos="fade-up">
+    <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; text-align: center;">
+      I'm always open to discussing new opportunities, collaborations, or simply connecting with fellow professionals. Feel free to reach out!
+    </p>
+
     <form action="mailto:mansoor01pasha@gmail.com" method="post" enctype="text/plain">
       <div style="display: flex; flex-direction: column; gap: 1rem;">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
       </div>
     </form>
 
-    <div class="social-links" style="margin-top: 2rem;">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:mansoor01pasha@gmail.com" onclick="gtag('event', 'contact_click', { 'event_category': 'Engagement', 'event_label': 'Contact Email' });">mansoor01pasha@gmail.com</a></p>
-      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mansoor-pasha-18470a1a7" target="_blank">LinkedIn Profile</a></p>
-      <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/mansoor.pasha01" target="_blank">Instagram</a></p>
+    <div style="margin-top: 3rem; text-align: center;">
+      <p style="font-size: 1.2rem; font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">Connect With Me</p>
+      <div class="social-links" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        <p style="font-size: 1.1rem;"><i class="fas fa-envelope"></i> <a href="mailto:mansoor01pasha@gmail.com" onclick="gtag('event', 'contact_click', { 'event_category': 'Engagement', 'event_label': 'Contact Email' });">Email</a></p>
+        <p style="font-size: 1.1rem;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mansoor-pasha-18470a1a7" target="_blank">LinkedIn</a></p>
+        <p style="font-size: 1.1rem;"><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/mansoor.pasha01" target="_blank">Instagram</a></p>
+        <p style="font-size: 1.1rem;"><i class="fas fa-map-marker-alt"></i> <span style="color: var(--primary-color); font-weight: 600;">Bangalore, India</span></p>
+      </div>
     </div>
   </div>
 </section>
 
 
   <footer>
-  <div style="text-align: center; padding: 1rem; background-color: #f8f9fa; color: #333;">
-    &copy; 2025 Mansoor Pasha. All rights reserved.
-    <br />
-    <a href="#top" style="text-decoration: none; color: #007BFF; font-weight: bold;">Back to Top</a>
+  <div style="text-align: center; padding: 2rem 1rem; background: var(--card-bg); border-top: 2px solid var(--primary-color);">
+    <p style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 0.5rem;">
+      <strong>Mansoor Pasha</strong> - Test Engineer
+    </p>
+    <p style="font-size: 0.95rem; color: var(--secondary-color); margin-bottom: 1rem;">
+      Building quality through innovation and automation
+    </p>
+    <p style="font-size: 0.9rem; color: #757575;">
+      &copy; 2025 Mansoor Pasha. All rights reserved.
+    </p>
+    <a href="#home" style="text-decoration: none; color: var(--primary-color); font-weight: bold; display: inline-block; margin-top: 1rem; transition: transform 0.3s ease;">Back to Top</a>
   </div>
 </footer>
 
