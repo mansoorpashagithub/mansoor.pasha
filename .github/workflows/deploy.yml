@@ -3,32 +3,31 @@ name: Inject Secrets and Deploy
 on:
   push:
     branches:
-      - main # IMPORTANT: Change to 'master' if that is your main branch name
+      - main 
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      # Step 1: Checks out your code
+    
+    # REQUIRED: Grant the workflow token permission to write files
+    **permissions:
+      contents: write** steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step 2: Inject the secrets using 'sed' (Stream Editor)
+      # --- Injection Step ---
       - name: Inject Google Analytics and Verification IDs
         run: |
-          # Inject GA Tracking ID (Replaces GA_ID_PLACEHOLDER with the secret value)
+          # Inject GA Tracking ID 
           sed -i "s/GA_ID_PLACEHOLDER/${{ secrets.GA_TRACKING_ID }}/g" index.html
-
-          # Inject Google Site Verification ID (Replaces GOOGLE_VERIFICATION_ID_PLACEHOLDER with the secret value)
+          
+          # Inject Google Site Verification ID
           sed -i "s/GOOGLE_VERIFICATION_ID_PLACEHOLDER/${{ secrets.GOOGLE_VERIFICATION_ID }}/g" index.html
 
-      # Step 3: Deploy the *modified* index.html file to GitHub Pages
+      # --- Deployment Step ---
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # GITHUB_TOKEN is automatically provided by GitHub
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Publishes all files in the root directory (where index.html is located)
           publish_dir: ./
-          # This ensures the deployment happens to the gh-pages branch
           publish_branch: gh-pages
