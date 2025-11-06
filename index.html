@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mansoor Pasha | Portfolio</title>
-  <meta name="description" content="Mansoor Pasha - Test Engineer at TCS specializing in IVR Testing, Automation, and API Validation. Creator of automation tools that reduce manual effort by 90%.">
-  <meta name="keywords" content="Mansoor Pasha, TCS, Test Engineer, IVR Testing, Genesys, Cyara, Automation, Python, API Testing, Bangalore, Mansoor Pasha TCS, Mansoor Pasha Infosys, Mansoor Pasha Bangalore, Mansoor Pasha Test Analyst, Test Analyst">
+  <title>Mansoor Pasha | Systems Engineer at TCS | IVR Testing Expert | Bangalore</title>
+  <meta name="description" content="Mansoor Pasha - Systems Engineer at TCS Bangalore specializing in IVR Testing on Genesys platform. Expert in Test Automation, Python, and API Validation. 4+ years experience at Infosys & TCS. Creator of automation tools reducing manual effort by 90%.">
+  <meta name="keywords" content="Mansoor Pasha, Mansoor Pasha TCS, Mansoor Pasha Infosys, Mansoor Pasha Bangalore, Mansoor Pasha Test Engineer, Mansoor Pasha Systems Engineer, Test Engineer TCS, IVR Testing Genesys, Cyara Testing, Automation Engineer Bangalore, Python Automation, API Testing Expert, Quality Assurance Engineer, Test Analyst TCS, Software Testing Bangalore, Mansoor Pasha Portfolio">
   <meta name="author" content="Mansoor Pasha">
-  <meta property="og:title" content="Mansoor Pasha - Portfolio">
-<meta property="og:description" content="Explore projects, resume, and contact info.">
-<meta property="og:image" content="profile.jpg">
-<meta property="og:url" content="https://mansoorpashagithub.github.io/mansoor.pasha/">
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Mansoor Pasha - Systems Engineer at TCS | IVR Testing Expert">
+  <meta property="og:description" content="4+ years of expertise in IVR Testing, Automation & API Validation at TCS & Infosys. Genesys & Cyara platform specialist. View projects, resume & contact info.">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:url" content="https://mansoorpashagithub.github.io/mansoor.pasha/">
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mansoor Pasha - Systems Engineer at TCS">
+  <meta name="twitter:description" content="IVR Testing Expert | Automation Specialist | Python Developer">
   <meta name="google-site-verification" content="JcnL6bNV4RXSMFTpc0_t6I-FDvfEf_H1SRGKPoK3IHg" />
   <link rel="icon" href="favicon.ico">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -21,18 +24,32 @@
       --bg-color: #0a0a0a;
       --text-color: #e8e8e8;
       --primary-color: #00d9ff;
-      --secondary-color: #0099cc;
+      --secondary-color: #00b4d8;
       --card-bg: #1a1a1a;
       --accent-color: #ff6b35;
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     }
 
     [data-theme="light"] {
       --bg-color: #f8f9fa;
       --text-color: #2c3e50;
-      --primary-color: #0099cc;
-      --secondary-color: #00d9ff;
+      --primary-color: #0077b6;
+      --secondary-color: #0096c7;
       --card-bg: #ffffff;
       --accent-color: #ff6b35;
+      --success-color: #059669;
+      --warning-color: #d97706;
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     }
 
     * {
@@ -48,6 +65,26 @@
       color: var(--text-color);
       transition: background 0.3s, color 0.3s;
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.05) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -108,21 +145,54 @@ nav a:hover::after {
       padding: 2.5rem;
       margin: 1.5rem auto;
       max-width: 950px;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(0, 217, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(0, 217, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .card:hover::before {
+      left: 100%;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 50px rgba(0, 217, 255, 0.3);
+      border-color: rgba(0, 217, 255, 0.4);
     }
 
     .section h2 {
       color: var(--primary-color);
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 4px;
+      background: var(--gradient-3);
+      border-radius: 2px;
     }
 
     .project-grid {
@@ -231,15 +301,35 @@ form button:hover {
       border-radius: 12px;
       width: 180px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      transition: all 0.3s ease;
-      font-weight: 500;
+      border: 2px solid rgba(0, 217, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-3);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
     }
 
     .skill:hover {
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.4);
+      transform: translateY(-10px) scale(1.08);
+      box-shadow: 0 12px 30px rgba(0, 217, 255, 0.5);
       border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .skill:hover::after {
+      transform: scaleX(1);
     }
 
     .timeline {
@@ -443,16 +533,55 @@ form button:hover {
 .stat-box {
   background: var(--card-bg);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
   text-align: center;
   min-width: 200px;
-  border: 1px solid rgba(0, 217, 255, 0.2);
-  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: var(--gradient-3);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
 }
 
 .stat-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+}
+
+.stat-box:hover::before {
+  opacity: 1;
+}
+
+.stat-box:nth-child(1)::before {
+  background: var(--gradient-3);
+}
+
+.stat-box:nth-child(2)::before {
+  background: var(--gradient-4);
+}
+
+.stat-box:nth-child(3)::before {
+  background: var(--gradient-5);
+}
+
+.stat-box:nth-child(4)::before {
+  background: var(--gradient-1);
 }
 
 .stat-number {
@@ -519,6 +648,36 @@ form button:hover {
 
   gtag('config', 'G-PTP6XFYMMC');
 </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Mansoor Pasha",
+    "jobTitle": "Systems Engineer - IVR Testing",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tata Consultancy Services"
+    },
+    "url": "https://mansoorpashagithub.github.io/mansoor.pasha/",
+    "sameAs": [
+      "https://www.linkedin.com/in/mansoorpasha01",
+      "https://www.instagram.com/mansoor.pasha01"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "India"
+    },
+    "email": "mansoor01pasha@gmail.com",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Dr. Ambedkar Institute of Technology"
+    },
+    "knowsAbout": ["IVR Testing", "Genesys", "Cyara", "Python", "Selenium", "API Testing", "Test Automation", "Quality Assurance"],
+    "description": "Systems Engineer at TCS with 4+ years of expertise in IVR Testing, Automation, and API Validation on Genesys and Cyara platforms."
+  }
+  </script>
 </head>
 <body>
 
@@ -544,11 +703,11 @@ form button:hover {
   <div class="section" id="home">
     <h2 data-aos="fade-right">Welcome</h2>
     <div class="card" data-aos="fade-up">
-      <p style="font-size: 1.15rem; line-height: 1.8;">
-        Hello! I'm <strong>Mansoor Pasha</strong>, a Test Engineer at <strong style="color: var(--primary-color);">Tata Consultancy Services (TCS)</strong> with over 4+ years of expertise in IVR Testing, API Validation, and Test Automation. Currently working on the <strong>Genesys platform</strong>, I specialize in designing innovative automation solutions that have reduced manual testing effort by up to 70%, significantly improving team productivity and software quality.
+      <p style="font-size: 1.2rem; line-height: 1.9; font-weight: 400;">
+        Hello! I'm <strong style="font-size: 1.3rem; color: var(--primary-color);">Mansoor Pasha</strong>, a <strong style="color: var(--primary-color);">Systems Engineer at Tata Consultancy Services (TCS)</strong> with <strong style="color: var(--accent-color);">4+ years</strong> of expertise in <strong>IVR Testing, API Validation, and Test Automation</strong>. Currently working on the <strong style="color: var(--secondary-color);">Genesys platform</strong>, I specialize in designing innovative automation solutions that have reduced manual testing effort by up to <strong style="color: var(--success-color);">90%</strong>, significantly improving team productivity and software quality.
       </p>
-      <p style="margin-top: 1rem; font-size: 1rem; color: var(--secondary-color); font-weight: 600;">
-        Test Engineer | IVR Testing Expert | Automation Enthusiast | Problem Solver
+      <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--secondary-color); font-weight: 600; padding: 1rem; background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 180, 216, 0.05)); border-radius: 10px; border-left: 4px solid var(--primary-color);">
+        Systems Engineer at TCS | IVR Testing Expert | Automation Specialist | Python Developer | Problem Solver
       </p>
 
       <!-- Thumbnail -->
@@ -563,12 +722,16 @@ form button:hover {
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
-          <span class="stat-number">70%</span>
-          <span class="stat-label">Manual Effort Reduction</span>
+          <span class="stat-number">90%</span>
+          <span class="stat-label">Effort Reduction</span>
         </div>
         <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
           <span class="stat-number">5+</span>
           <span class="stat-label">Automation Tools</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Top Companies</span>
         </div>
       </div>
 
@@ -601,7 +764,7 @@ form button:hover {
       <div class="highlight-box">
         <p style="font-size: 1.15rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem;">What I Do</p>
         <p style="font-size: 1.05rem; line-height: 1.8;">
-          With expertise across <strong>IVR platforms (Genesys & Avaya), I design automation solutions using <strong>Python, Excel Macros, Selenium,</strong> and various testing frameworks. My work consistently delivers 70-90% reductions in manual effort while improving accuracy and reporting clarity across complex call center technology environments.
+          With expertise across <strong>IVR platforms (Genesys & Cyara)</strong>, I design automation solutions using <strong>Python, Excel Macros, Selenium,</strong> and various testing frameworks. My work consistently delivers <strong style="color: var(--success-color);">70-90% reductions</strong> in manual effort while improving accuracy and reporting clarity across complex call center technology environments.
         </p>
       </div>
 
@@ -665,9 +828,9 @@ form button:hover {
   <div class="timeline">
     <div class="timeline-item" data-aos="fade-up">
       <div class="card">
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Tata Consultancy Services (TCS)</h3>
-        <p style="font-size: Systems Engineer - IVR Testing (Genesys Platform)</strong></p>
-        <p style="color: var(--secondary-color); font-weight: 600;">August 2025 – Present | Bangalore, India</p>
+        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.6rem;">Tata Consultancy Services (TCS)</h3>
+        <p style="font-size: 1.1rem;"><strong>Systems Engineer - IVR Testing (Genesys Platform)</strong></p>
+        <p style="color: var(--secondary-color); font-weight: 600; font-size: 1rem;">August 2025 – Present | Bangalore, India</p>
         <ul style="text-align: left; margin-top: 1.5rem; line-height: 1.9; font-size: 1.05rem;">
           <li>Conducting comprehensive IVR functional testing on the <strong>Genesys platform</strong>, ensuring seamless customer interaction experiences.</li>
           <li>Designing and executing complex test cases for call flows, validating DTMF inputs, voice prompts, and routing logic.</li>
